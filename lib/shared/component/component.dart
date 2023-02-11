@@ -4,13 +4,8 @@ Widget divider() {
   return Padding(
     padding: const EdgeInsets.all(20.0),
     child: Container(
-
-      width: 80,
+        width: 80,
         height: 1.5,
-        decoration: BoxDecoration(
-            color: Colors.indigo
-
-
-        )),
+        decoration: BoxDecoration(color: Colors.indigo)),
   );
 }

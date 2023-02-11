@@ -19,6 +19,7 @@ class _layout_screenState extends State<layout_screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          backgroundColor: Colors.transparent,
           elevation: 0.0,
           centerTitle: true,
           flexibleSpace: Container(
@@ -28,13 +29,13 @@ class _layout_screenState extends State<layout_screen> {
                     const Color(0xFF3366DF),
                     const Color(0xFF8DA1FF),
                   ],
-                  begin: const FractionalOffset(0.0, 1),
-                  end: const FractionalOffset(0.0, 0.0),
+                  begin: const FractionalOffset(.40, 1),
+                  end: const FractionalOffset(0.0, 0),
                   stops: [0.1, 1.0],
                   tileMode: TileMode.clamp),
             ),
           )),
-      body:  SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -55,12 +56,22 @@ class _layout_screenState extends State<layout_screen> {
               Center(
                 child: Column(
                   children: [
-                    Text(
-                      ' ${weatherdata!.name}',
-                      style: TextStyle(
-                          fontSize: 30.sp,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          ' ${weatherdata!.name.toString()}',
+                          style: TextStyle(
+                              fontSize: 30.sp,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Icon(
+                          Icons.location_on,
+                          color: Colors.red.shade900,
+                          size: 40,
+                        )
+                      ],
                     ),
                     SizedBox(
                       height: 15.h,
@@ -193,7 +204,7 @@ class _layout_screenState extends State<layout_screen> {
                 height: 10.h,
               ),
               Container(
-                height: 320.h,
+                height: 350.h,
                 width: 300.w,
                 decoration: BoxDecoration(
                     color: main,
@@ -228,7 +239,7 @@ class _layout_screenState extends State<layout_screen> {
                       Row(
                         children: [
                           Text(
-                            ' ${dt.day+1}/${dt.month}',
+                            ' ${dt.day + 1}/${dt.month}',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.sp,
@@ -251,7 +262,7 @@ class _layout_screenState extends State<layout_screen> {
                       Row(
                         children: [
                           Text(
-                            ' ${dt.day+2}/${dt.month}',
+                            ' ${dt.day + 2}/${dt.month}',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.sp,
@@ -274,7 +285,7 @@ class _layout_screenState extends State<layout_screen> {
                       Row(
                         children: [
                           Text(
-                            ' ${dt.day+3}/${dt.month}',
+                            ' ${dt.day + 3}/${dt.month}',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.sp,
@@ -297,7 +308,7 @@ class _layout_screenState extends State<layout_screen> {
                       Row(
                         children: [
                           Text(
-                            ' ${dt.day+4}/${dt.month}',
+                            ' ${dt.day + 4}/${dt.month}',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.sp,
@@ -320,7 +331,7 @@ class _layout_screenState extends State<layout_screen> {
                       Row(
                         children: [
                           Text(
-                            ' ${dt.day+5}/${dt.month}',
+                            ' ${dt.day + 5}/${dt.month}',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.sp,

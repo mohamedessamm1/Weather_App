@@ -31,6 +31,7 @@ dependencies:
   shared_preferences: ^2.0.15
   flutter_screenutil: ^5.6.1
   http: ^0.13.5
+  csc_picker: ^0.2.7
   country_state_city_picker: ^1.2.8
 
   flutter:
